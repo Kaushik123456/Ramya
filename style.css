@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+/*    position: relative;*/
+}
+.heading{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+.heading h1{
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 40px;
+    animation: animate 2s linear infinite;
+}
+.content{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.content .links{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content .links a{
+    text-decoration: none;
+    color: #000;
+    font-size: 2em;
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    transition: 0.5s;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+}
+/*
+.content .links h1{
+    margin: 10px 0;
+    text-align: center;
+}
+*/
+.content .links a:hover{
+    color: #fff;
+}
+.content .links a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100px;
+    background: url(img/back1.png);
+/*    background-size: cover;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: left;
+    transition: 0.5s;
+}
+.content .links a:hover:before{
+    width: 100%;
+}
+.content .links a span{
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-20%);
+}
+.pics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.pics .box{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate1 20s linear infinite;
+}
+.pics .box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.pics .box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@keyframes animate{
+    0%{
+        font-size: 3em;
+    }
+    50%{
+        font-size: 3.5em;        
+    }
+    100%{
+        font-size: 3em;        
+    }
+}
+@keyframes animate1{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
