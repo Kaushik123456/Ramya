@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -203,10 +203,11 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-family: 'Pacifico', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 20px;
     color: #000;
     font-weight: 900;
+    text-align: center;
 }
 .invitation .wrapper .mail:hover .cover:before{
     transform: rotateX(180deg);
