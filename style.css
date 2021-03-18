@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -119,6 +120,101 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+.invitation{
+    margin: 0;
+    padding: 0;
+    background: #302929;
+}
+.invitation .wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.invitation .wrapper .mail{
+    width: 500px;
+    height: 300px;
+    background: #ff8789;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.invitation .wrapper .mail:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 250px solid transparent;
+    border-right: 250px solid #ff393c;
+    border-top: 150px solid transparent;
+    border-bottom: 150px solid #ff393c;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 5;
+    
+}
+.invitation .wrapper .mail:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 250px solid #ff5355;
+    border-right: 250px solid transparent;
+    border-top: 150px solid transparent;
+    border-bottom: 150px solid #ff5355;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 4;
+    
+}
+.invitation .wrapper .mail .cover:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-top: 150px solid #ff8789;
+    border-bottom: 150px solid transparent;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: all 1s 1s ease;
+    z-index: 6;
+}
+.invitation .wrapper .mail .letter{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background: url(img/back2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 480px;
+    height: 280px;
+    border-radius: 20px;
+    transition: all 1s ease;
+    z-index: 3;
+}
+.invitation .wrapper .mail .letter h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: #000;
+    font-weight: 900;
+}
+.invitation .wrapper .mail:hover .cover:before{
+    transform: rotateX(180deg);
+    transition: all 1s ease;
+}
+.invitation .wrapper .mail:hover .letter{
+    top: -220px;
+    transition: all 1s 1s ease;
 }
 @keyframes animate{
     0%{
